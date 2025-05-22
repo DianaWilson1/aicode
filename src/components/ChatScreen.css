@@ -1,0 +1,93 @@
+/* Full-width input area at the bottom */
+.main {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 999px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  z-index: 10;
+}
+
+/* Full-width input field */
+.main input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus border effect */
+.main input[type="text"]:focus {
+  border-color: #1e1f20;
+}
+
+/* Send button */
+.main button {
+  padding: 14px 22px;
+  background-color: #1e1e1f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main button:hover {
+  background-color: #252525;
+  color: white;
+}
+
+/* Chat messages container */
+.chat-list {
+  max-width: 600px;
+  margin: -79px -44rem 593px;  /* Add bottom margin so input doesn't overlap */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Message styles */
+.message {
+  display: flex;
+  padding: 63px;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.ai {
+  justify-content: flex-start;
+}
+
+.bubble {
+  padding: 14px 20px;
+  border-radius: 999px;
+  max-width: 95%;
+  width: fit-content;
+  font-size: 16px;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+
+.message.user .bubble {
+  background-color: #252627;
+  color: white;
+  margin-right:-66rem;
+}
+
+.message.ai .bubble {
+  background-color: #e4e6eb;
+  color: black;
+  margin-left: -16rem;
+}
